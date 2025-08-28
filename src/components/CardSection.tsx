@@ -54,19 +54,19 @@ export function CardSection() {
         <p className="text-xl text-gray-600 text-center mb-12">
           Todo lo que necesitas en un solo lugar
         </p>
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-5 lg:gap-6">
           {cards.map((card, index) => <div 
               key={index} 
               onClick={() => handleCardClick(card.title)}
-              className="bg-white rounded-xl shadow-lg p-2 sm:p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 flex flex-col items-center text-center cursor-pointer h-60 w-28 sm:w-60 lg:w-72 flex-shrink-0"
+              className="bg-white rounded-xl shadow-lg p-3 sm:p-4 lg:p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 flex flex-col items-center text-center cursor-pointer h-60 w-40 sm:w-52 lg:w-72 flex-shrink-0"
             >
-              <div className="bg-blue-900 text-white p-2 sm:p-4 rounded-full mb-2 sm:mb-4 flex-shrink-0">
+              <div className="bg-blue-900 text-white p-3 sm:p-4 lg:p-4 rounded-full mb-3 sm:mb-4 flex-shrink-0">
                 {card.icon}
               </div>
-              <h3 className="text-xs sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3 leading-tight flex-shrink-0">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-800 mb-2 sm:mb-3 leading-tight flex-shrink-0">
                 {card.title}
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed flex-grow overflow-hidden">{card.description}</p>
+              <p className="text-xs sm:text-xs lg:text-sm text-gray-600 leading-relaxed flex-grow overflow-hidden">{card.description}</p>
             </div>)}
         </div>
       </div>
