@@ -8,5 +8,5 @@ export default defineConfig({
     port: 3000, // Cambia este puerto por el que desees (ej: 3000, 8080, 4000, etc.)
     host: true, // Permite acceso desde otras IPs en la red local
   },
-  base: '/torem/'
+  base: process.env.NODE_ENV === 'production' ? '/torem/' : '/',
 })
