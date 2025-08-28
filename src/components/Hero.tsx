@@ -18,8 +18,16 @@ export function Hero() {
   }}>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="absolute inset-0 flex flex-col items-center justify-between py-10 px-4">
-        <div className="text-white text-3xl font-bold tracking-wider z-10">
-          TOREM
+        <div className="z-10">
+          <img 
+            src="/images/logo-torem.jpeg"
+            alt="TOREM Logo" 
+            className="h-16 md:h-20 w-auto"
+            onError={(e) => {
+              console.error('Error loading logo:', e);
+              e.currentTarget.style.display = 'none';
+            }}
+          />
         </div>
         <div className="text-center z-10 max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
