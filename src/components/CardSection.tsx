@@ -1,4 +1,4 @@
-import { CalendarIcon, NewspaperIcon, HomeIcon, CarIcon, CreditCardIcon, PhoneIcon, ShareIcon } from 'lucide-react';
+import { CalendarIcon, NewspaperIcon, HomeIcon, CarIcon, CreditCardIcon, PhoneIcon, ShareIcon, UserCheckIcon } from 'lucide-react';
 
 export function CardSection() {
   const handleCardClick = (cardTitle: string) => {
@@ -31,8 +31,12 @@ export function CardSection() {
     description: 'Informa sobre peticiones, quejas, sugerencias o problemas en el conjunto'
   }, {
     icon: <CreditCardIcon className="w-8 h-8" />,
-    title: 'Estados de Cuenta / Pagos',
+    title: 'Estados de Cuenta / Pagos a la administración',
     description: 'Administra tus obligaciones'
+  }, {
+    icon: <UserCheckIcon className="w-8 h-8" />,
+    title: 'Formulario de Actualización de Residentes',
+    description: 'Actualiza tu información personal, contacto y datos del apartamento'
   }, {
     icon: <PhoneIcon className="w-8 h-8" />,
     title: 'Contacto con la Administración',
