@@ -9,4 +9,8 @@ export default defineConfig({
     host: true, // Permite acceso desde otras IPs en la red local
   },
   base: process.env.NODE_ENV === 'production' ? '/torem/' : '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
 })
