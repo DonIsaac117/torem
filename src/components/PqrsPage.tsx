@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ArrowLeftIcon, AlertTriangleIcon, HomeIcon, WrenchIcon, DropletIcon, ZapIcon, WifiIcon, BugIcon, PlusIcon } from 'lucide-react';
+import { ArrowLeftIcon, AlertTriangleIcon, HomeIcon, WrenchIcon, DropletIcon, ZapIcon, WifiIcon, PlusIcon } from 'lucide-react';
 
-export function ReportePage() {
+export function PqrsPage() {
   const [formData, setFormData] = useState({
     type: '',
     area: '',
@@ -13,13 +13,14 @@ export function ReportePage() {
     email: ''
   });
 
-  const reportTypes = [
-    { id: 'damage', label: 'Daño estructural', icon: <HomeIcon className="w-5 h-5" /> },
+  const pqrsTypes = [
+    { id: 'complaint', label: 'Queja', icon: <AlertTriangleIcon className="w-5 h-5" /> },
+    { id: 'request', label: 'Petición', icon: <HomeIcon className="w-5 h-5" /> },
+    { id: 'suggestion', label: 'Sugerencia', icon: <PlusIcon className="w-5 h-5" /> },
     { id: 'maintenance', label: 'Mantenimiento', icon: <WrenchIcon className="w-5 h-5" /> },
     { id: 'plumbing', label: 'Plomería', icon: <DropletIcon className="w-5 h-5" /> },
     { id: 'electrical', label: 'Eléctrico', icon: <ZapIcon className="w-5 h-5" /> },
     { id: 'internet', label: 'Internet/Cable', icon: <WifiIcon className="w-5 h-5" /> },
-    { id: 'pest', label: 'Control de plagas', icon: <BugIcon className="w-5 h-5" /> },
     { id: 'other', label: 'Otro', icon: <PlusIcon className="w-5 h-5" /> }
   ];
 
@@ -52,8 +53,8 @@ export function ReportePage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí se enviaría el reporte
-    alert('Reporte enviado exitosamente. Te contactaremos pronto.');
+    // Aquí se enviaría la PQRS
+    alert('PQRS enviada exitosamente. Te contactaremos pronto.');
     // Resetear formulario
     setFormData({
       type: '',
@@ -87,8 +88,8 @@ export function ReportePage() {
             <div className="flex items-center gap-3">
               <AlertTriangleIcon className="w-8 h-8 text-orange-600" />
               <div>
-                <h1 className="text-2xl font-bold text-gray-800">Reporte de Daños o Novedades</h1>
-                <p className="text-gray-600">Informa cualquier problema o novedad en el conjunto</p>
+                <h1 className="text-2xl font-bold text-gray-800">PQRS - Peticiones, Quejas y Sugerencias</h1>
+                <p className="text-gray-600">Informa cualquier problema, solicitud o sugerencia en el conjunto</p>
               </div>
             </div>
           </div>
@@ -100,13 +101,13 @@ export function ReportePage() {
         <div className="bg-white rounded-xl shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-8">
             
-            {/* Tipo de Reporte */}
+            {/* Tipo de PQRS */}
             <div>
               <label className="block text-lg font-semibold text-gray-800 mb-4">
-                Tipo de Reporte
+                Tipo de PQRS
               </label>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                {reportTypes.map((type) => (
+                {pqrsTypes.map((type) => (
                   <button
                     key={type.id}
                     type="button"
@@ -257,7 +258,7 @@ export function ReportePage() {
                 type="submit"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 text-lg"
               >
-                Enviar Reporte
+                Enviar PQRS
               </button>
             </div>
           </form>
@@ -268,9 +269,9 @@ export function ReportePage() {
           <h3 className="text-lg font-semibold text-blue-800 mb-2">¿Qué pasa después?</h3>
           <ul className="text-blue-700 space-y-1">
             <li>• Recibirás un número de ticket para seguimiento</li>
-            <li>• La administración revisará tu reporte en máximo 24 horas</li>
+            <li>• La administración revisará tu PQRS en máximo 24 horas</li>
             <li>• Te contactaremos para coordinar la solución</li>
-            <li>• Puedes consultar el estado de tu reporte en cualquier momento</li>
+            <li>• Puedes consultar el estado de tu PQRS en cualquier momento</li>
           </ul>
         </div>
       </div>

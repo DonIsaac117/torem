@@ -1,10 +1,9 @@
-import React from 'react';
-import { CalendarIcon, NewspaperIcon, BarChartIcon, HomeIcon, CarIcon, CreditCardIcon, PhoneIcon, ShareIcon } from 'lucide-react';
+import { CalendarIcon, NewspaperIcon, HomeIcon, CarIcon, CreditCardIcon, PhoneIcon, ShareIcon } from 'lucide-react';
 
 export function CardSection() {
   const handleCardClick = (cardTitle: string) => {
-    if (cardTitle === 'Reporte de daños o novedades') {
-      window.location.href = '/reporte';
+    if (cardTitle === 'PQRS - Peticiones, Quejas y Sugerencias') {
+      window.location.href = '#/pqrs';
     } else {
       // Aquí puedes agregar navegación para otras tarjetas en el futuro
       console.log(`Clicked on: ${cardTitle}`);
@@ -12,7 +11,7 @@ export function CardSection() {
   };
   const cards = [{
     icon: <CalendarIcon className="w-8 h-8" />,
-    title: 'Reservar Zonas Sociales',
+    title: 'Reservar Zonas Comúnes',
     description: 'Agenda el uso de áreas comunes'
   }, {
     icon: <NewspaperIcon className="w-8 h-8" />,
@@ -28,8 +27,8 @@ export function CardSection() {
     description: 'Explora oportunidades disponibles'
   }, {
     icon: <NewspaperIcon className="w-8 h-8" />,
-    title: 'Reporte de daños o novedades',
-    description: 'Informa sobre daños, problemas o novedades en el conjunto'
+    title: 'PQRS - Peticiones, Quejas y Sugerencias',
+    description: 'Informa sobre peticiones, quejas, sugerencias o problemas en el conjunto'
   }, {
     icon: <CreditCardIcon className="w-8 h-8" />,
     title: 'Estados de Cuenta / Pagos',
